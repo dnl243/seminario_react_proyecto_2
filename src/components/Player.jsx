@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Avatar from "./Avatar";
 
 export default function Player({
   initialName = "Please edit me!",
@@ -25,12 +26,15 @@ export default function Player({
   }
 
   return (
-    <li className={isActive ? "active" : undefined}>
-      <span className="player">
-        {editablePlayerName}
-        <span className="player-symbol">{symbol}</span>
-      </span>
-      <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
-    </li>
+    <>
+      <li className={`player_li ${isActive ? "active" : undefined}`}>
+        <Avatar playerName={playerName} />
+        <span className="player">
+          {editablePlayerName}
+          <span className="player-symbol">{symbol}</span>
+        </span>
+        <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
+      </li>
+    </>
   );
 }

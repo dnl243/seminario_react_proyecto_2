@@ -100,6 +100,11 @@ h1 {
   color: #f8ca31;
 }
 
+.player_li{
+  display: flex;
+  flex-direction: column;
+}
+
 .player {
   border: 2px solid transparent;
   padding: 0.5rem;
